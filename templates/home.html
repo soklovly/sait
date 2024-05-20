@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Поиск наиболее частого слова в файле{% endblock %}
+{% block body %}
+<div class="container">
+    <h1 class="mt-5">Upload a File</h1>
+    {% if txt_file_error %}
+    <p class="text-danger">Only .txt files are allowed!</p>
+    {% endif %}
+    <form method="POST" enctype="multipart/form-data" class="mt-3">
+        <input type="file" name="file" class="form-control">
+        <input type="submit" value="Upload" class="btn btn-brown mt-3">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+< мяу > <style>
+    body {
+    background-color: pink;
+}
+
+input[type="file"] {
+    background-color: #FF1493; /* pinkdeep */
+    color: black; /* цвет текста */
+}
+.bg-pink {
+    background-color: #FF69B4; /* pinkhot */
+    color: black; /* texttt*/
+}
+
+.bg-pink:hover {
+    background-color: #A0522D; /* изменение цвета при наведении */
+    color: white; /* белый текст при наведении */
+}
+.btn-pink {
+    background-color: #FF1493; /* pinkdeep */
+    border: none; /* убираем границу */
+    color: black; /* белый текст для контраста */
+    font-weight: bold; /* жирный шрифт */
+}
+
+.btn-pink:hover {
+    background-color: #A0522D; /* изменение цвета при наведении */
+    color: white; /* белый текст при наведении */
+}
+
+.table-custom {
+    background-color: pink; /* rozoviy */
+}
+
+/* Стили для четных строк */
+.table-custom tbody tr:nth-child(even) {
+    background-color: #DB7093; /* pink фон для четных строк */
+    color: black; /* черный текст для контраста */
+}
+
+/* Стили для нечетных строк */
+.table-custom tbody tr:nth-child(odd) {
+    background-color: MediumVioletRed; /* другой розовый фон для нечетных строк */
+}
+
+/* Стили для заголовков таблицы */
+.table-custom thead th {
+    background-color: #00FF00; /* цвет фона для заголовков */
+    color: white; /* белый текст */
+    font-weight: bold; /* жирный шрифт */
+}
+.custom-container
+{
+background-color: pink;/* роз фон контейнера */
+color: #8B4513;}
+.custom-container h1 {
+color: #FF1493; /* роз цвет заголовка */
+}
+/* Стили для текста */
+.custom-container p {
+color: #DB7093; /* роз цвет текста */
+}
+
+</style>
+    <title>{% block title %}{% endblock %}</title>
+    <script>{% block scripts %}{% endblock %}</script>
+</head>
+<body>
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+        <span class="fs-4">Встречаемость слов в тексте</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="/" class="nav-link bg-brown" aria-current="page">Home </a></li>
+        <li class="nav-item"><a href="/index" class="nav-link bg-brown">About me </a></li>
+      </ul>
+    </header>
+  </div>
+    {% block body %}{% endblock %}
+</body>
+</html>
